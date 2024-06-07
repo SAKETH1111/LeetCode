@@ -20,3 +20,32 @@ Each character takes 8 bits of space, 1 byte, hence the addresses are 1 byte apa
 - Reading
 - Deletion
 - Insertion
+5. The last index of the array is n-1 if n is the size of array
+Reading from an array
+1. Index starts from 0
+// initialize myArray
+int[] myArray = {1,3,5};
+
+// access an arbitrary element, where i is the index of the desired value
+myArray[i];
+
+O(1) really means is that the number of operations is constant relative to the input size.
+
+Traversing through an array
+
+```
+for (int i = 0; i < myArray.length; i++) {
+    System.out.println(myArray[i]);
+}
+
+// OR
+
+int i = 0;
+while (i < myArray.length) {
+    System.out.println(myArray[i]);
+    i++;
+}
+
+```
+Deleting from an array
+
