@@ -1,1 +1,6 @@
-Hello
+
+
+In LinkedList if you want add element to the list you use
+-> List.add(1);
+If you want to add it in thr front you must use addFirst()
+-> List.addFirst(2);
