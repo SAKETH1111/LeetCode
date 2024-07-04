@@ -8,3 +8,10 @@ If you want to add it in thr front you must use addFirst()
 
 poll(): removes and retrieves the head of the queue. 
 q. peek(): does not remove but only retrieves/returns the head of the queue
+
+
+inorder.length -> to check the length of an array.
+
+Arrays.copyOfRange(preorder,1,mid+1)
+
+array name, start and end index is given in 
