@@ -1,1 +1,22 @@
 Linked List
+The topics that are important are 
+1. Singly Linked Lists
+2. Doubly Linked Lists
+3. Fast and Slow pointers
+
+Fast and Slow Pointer
+```
+public int fn(ListNode head) {
+    ListNode slow = head;
+    ListNode fast = head;
+    int ans = 0;
+
+    while (fast != null && fast.next != null) {
+        // do logic
+        slow = slow.next;
+        fast = fast.next.next;
+    }
+
+    return ans;
+}
+```
