@@ -20,3 +20,5 @@ public int fn(ListNode head) {
     return ans;
 }
 ```
+    // fast and slow pointer will intersect at one point
+    // from that point the distance from begining and from that point to first cylce start point is the same, floyds algorithm
