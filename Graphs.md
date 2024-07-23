@@ -48,3 +48,64 @@
 }
 ```
 ## Matrix DFS
+
+1. DFS is Recursive in Nature
+
+2.
+   ```
+   // Count paths (backtracking)
+    int dfs(int[][] grid, int r, int c, int[][] visit) {
+    int ROWS = grid.length, COLS = grid[0].length;
+
+    if (Math.min(r, c) < 0 || r == ROWS || c == COLS ||
+        visit[r][c] == 1 || grid[r][c] == 1 ) {
+        return 0;
+    }
+    if (r == ROWS - 1 && c == COLS - 1) {
+        return 1;
+    }
+    visit[r][c] = 1;
+
+    int count = 0;
+    count += dfs(grid, r + 1, c, visit);
+    count += dfs(grid, r - 1, c, visit);
+    count += dfs(grid, r, c + 1, visit);
+    count += dfs(grid, r, c - 1, visit);
+
+    visit[r][c] = 0;
+    return count;
+    }                       
+    ```
+   3. Island related problems can be done using DFS recursive.
+  
+   4. 
+```
+class Solution {
+    public int numIslands(char[][] grid) {
+        int count =0;
+        int row = grid.length ;
+        int column = grid[0].length;
+        for(int i=0;i< row;i++){
+            for(int j=0;j<column;j++){
+                if(grid[i][j]=='1'){
+                    dfs(grid,i,j);
+                    count++;
+                }
+            }
+        }
+        return count;
+        
+    }
+    public void dfs(char[][] grid,int r , int c){
+        if(Math.min(r,c)<0 || r >(grid.length-1) || c > (grid[0].length-1) || grid[r][c]=='0'){
+            return;
+        }
+        grid[r][c] = '0';
+        dfs(grid,r+1,c);
+        dfs(grid,r-1,c);
+        dfs(grid,r,c+1);
+        dfs(grid,r,c-1);
+    }
+}
+```
+## Matrix BFS
