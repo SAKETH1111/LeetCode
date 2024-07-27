@@ -109,3 +109,7 @@ class Solution {
 }
 ```
 ## Matrix BFS
+
+1.  Breadth-first search is most commonly used to find the `shortest path` in a graph.
+2.  
+   
